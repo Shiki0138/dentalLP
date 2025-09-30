@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>梅田ビジネスホワイトニングLP（ベース）</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #1a3c8e;
+      --accent: #f5a623;
+      --bg: #f5f7fb;
+      --text: #1f2a44;
+      --muted: #6b768f;
+      --border: #d5dbe8;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Noto Sans JP', 'Roboto', sans-serif;
+      color: var(--text);
+      background: #fff;
+      line-height: 1.6;
+    }
+    a {
+      color: inherit;
+    }
+    .container {
+      width: min(1120px, 90vw);
+      margin: 0 auto;
+    }
+    header {
+      background: linear-gradient(135deg, #0c1f54 0%, #1f4eb2 60%, #1a3c8e 100%);
+      color: #fff;
+      padding: 64px 0 48px;
+      position: relative;
+      overflow: hidden;
+    }
+    header::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url('https://images.unsplash.com/photo-1606811841689-23dfddce3d29?auto=format&fit=crop&w=1400&q=80') no-repeat center/cover;
+      opacity: 0.25;
+      mix-blend-mode: lighten;
+      pointer-events: none;
+    }
+    header .container {
+      position: relative;
+      z-index: 2;
+      display: grid;
+      gap: 32px;
+    }
+    .hero-headline {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .hero-headline h1 {
+      font-size: clamp(28px, 4vw, 40px);
+      font-weight: 700;
+      letter-spacing: 0.05em;
+    }
+    .hero-headline p {
+      font-size: clamp(16px, 2vw, 20px);
+      color: rgba(255,255,255,0.9);
+    }
+    .badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      list-style: none;
+    }
+    .badges li {
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.25);
+      border-radius: 999px;
+      padding: 8px 16px;
+      font-size: 14px;
+    }
+    .hero-cta {
+      display: grid;
+      gap: 16px;
+      align-items: start;
+    }
+    .cta-box {
+      background: #fff;
+      color: var(--text);
+      border-radius: 16px;
+      box-shadow: 0 16px 32px rgba(11,30,72,0.15);
+      padding: 24px;
+      display: grid;
+      gap: 16px;
+    }
+    .cta-box h2 {
+      font-size: 20px;
+      font-weight: 700;
+    }
+    .cta-actions {
+      display: grid;
+      gap: 12px;
+    }
+    .cta-btn {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      padding: 14px;
+      border-radius: 8px;
+      border: none;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      text-decoration: none;
+    }
+    .cta-btn.primary {
+      background: var(--accent);
+      color: #0a1538;
+      box-shadow: 0 8px 16px rgba(245,166,35,0.35);
+    }
+    .cta-btn.secondary {
+      background: var(--primary);
+      color: #fff;
+    }
+    .cta-btn.ghost {
+      background: transparent;
+      color: var(--primary);
+      border: 1px solid rgba(26,60,142,0.2);
+    }
+    .cta-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.12);
+    }
+    section {
+      padding: 72px 0;
+    }
+    section:nth-of-type(even) {
+      background: var(--bg);
+    }
+    h2.section-title {
+      font-size: clamp(24px, 3vw, 32px);
+      text-align: center;
+      margin-bottom: 40px;
+      position: relative;
+    }
+    h2.section-title::after {
+      content: '';
+      width: 64px;
+      height: 4px;
+      border-radius: 100px;
+      background: var(--accent);
+      display: block;
+      margin: 16px auto 0;
+    }
+    .grid {
+      display: grid;
+      gap: 32px;
+    }
+    .grid.two {
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+    .grid.three {
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    }
+    .card {
+      background: #fff;
+      border-radius: 16px;
+      padding: 24px;
+      border: 1px solid rgba(26,60,142,0.08);
+      box-shadow: 0 12px 24px rgba(15,35,70,0.08);
+      display: grid;
+      gap: 16px;
+    }
+    .card h3 {
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--primary);
+    }
+    .list-check {
+      list-style: none;
+      display: grid;
+      gap: 8px;
+    }
+    .list-check li::before {
+      content: '✔';
+      color: var(--accent);
+      font-weight: 700;
+      margin-right: 8px;
+    }
+    .story {
+      border-left: 4px solid var(--accent);
+      padding: 16px 24px;
+      background: #fff6ea;
+      font-size: 15px;
+    }
+    .timeline {
+      display: grid;
+      gap: 16px;
+    }
+    .timeline-step {
+      display: grid;
+      gap: 4px;
+      padding: 16px;
+      border-radius: 12px;
+      background: #fff;
+      border: 1px solid var(--border);
+    }
+    .highlight {
+      color: var(--accent);
+      font-weight: 700;
+    }
+    .pricing-table {
+      display: grid;
+      gap: 16px;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    }
+    .price-card {
+      background: #fff;
+      border-radius: 18px;
+      border: 1px solid rgba(26,60,142,0.12);
+      box-shadow: 0 16px 36px rgba(11,30,72,0.1);
+      padding: 28px;
+      display: grid;
+      gap: 16px;
+      position: relative;
+    }
+    .price-card.featured {
+      border: 2px solid var(--accent);
+    }
+    .ribbon {
+      position: absolute;
+      top: -12px;
+      right: 16px;
+      background: var(--accent);
+      color: #0a1538;
+      padding: 4px 12px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+    }
+    .testimonial {
+      background: #fff;
+      border-radius: 18px;
+      border: 1px solid rgba(26,60,142,0.12);
+      padding: 24px;
+      position: relative;
+      box-shadow: 0 12px 28px rgba(13,30,70,0.08);
+    }
+    .testimonial::before {
+      content: '“';
+      font-size: 60px;
+      color: rgba(26,60,142,0.12);
+      position: absolute;
+      top: -20px;
+      left: 20px;
+    }
+    .testimonial footer {
+      margin-top: 16px;
+      font-weight: 600;
+      color: var(--muted);
+    }
+    .final-cta {
+      text-align: center;
+      display: grid;
+      gap: 24px;
+    }
+    .calendar {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+    }
+    .slot {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 18px;
+      display: grid;
+      gap: 4px;
+    }
+    .slot strong {
+      color: var(--primary);
+    }
+    footer {
+      background: #0c1f54;
+      color: rgba(255,255,255,0.7);
+      padding: 32px 0;
+      font-size: 14px;
+      text-align: center;
+    }
+    @media (min-width: 900px) {
+      header .container {
+        grid-template-columns: 3fr 2fr;
+      }
+      .hero-cta {
+        align-content: start;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="hero-headline">
+        <h1>商談前45分で信頼度を上げるビジネスホワイトニング<span class="highlight">｜梅田駅徒歩5分</span></h1>
+        <p>営業・コンサル・管理職の方へ。痛みゼロ設計、最短6営業日でプレゼンや会議に間に合う梅田ビジネスパーソン専用プログラム。</p>
+        <ul class="badges">
+          <li>知覚過敏対策処方</li>
+          <li>年間2,400症例の審美実績</li>
+          <li>平日12:00〜14:00優先枠</li>
+          <li>Google口コミ ★4.8 / 312件</li>
+        </ul>
+      </div>
+      <div class="hero-cta">
+        <div class="cta-box">
+          <h2>平日昼枠 残り<span class="highlight">3</span>枠｜初回限定9,800円（通常13,000円）</h2>
+          <p>5分で仮予約→30分以内にスタッフが折り返し。ランチ後そのままご来院いただけます。</p>
+          <div class="cta-actions">
+            <a href="#reserve" class="cta-btn primary">本日の昼休み空き枠を確認</a>
+            <a href="#reserve" class="cta-btn secondary">LINEで相談（24時間OK）</a>
+            <a href="#reserve" class="cta-btn ghost">今すぐ電話：06-XXXX-XXXX</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <div class="container grid two">
+        <div class="card">
+          <h3>こんなお悩みはありませんか？</h3>
+          <ul class="list-check">
+            <li>商談や会議で笑うと黄ばみが気になり集中できない。</li>
+            <li>オンライン会議の画面越しで歯の色が悪目立ちしている気がする。</li>
+            <li>セルフホワイトニングはムラやしみる感じがあり続かなかった。</li>
+            <li>痛みや知覚過敏が怖くて歯科ホワイトニングに踏み切れない。</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>45分で仕事の合間に完結</h3>
+          <p>梅田駅徒歩5分。スーツのまま来院、個室で照射後すぐに飲食・外出OK。知覚過敏が出ない薬剤と照射設計なので、施術後そのまま商談・会議へ戻れます。</p>
+          <a href="#reserve" class="cta-btn ghost">商談前チェックリストを受け取る</a>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2 class="section-title">成功事例｜営業Mさん（32歳・外資IT）</h2>
+        <div class="grid two">
+          <div>
+            <div class="story">
+              <p>「全国会議での登壇を控え、オンラインでも対面でも自信を持ちたい」と来院。<br>初回カウンセリング後、<span class="highlight">6営業日で3回照射</span>。商談前に笑顔の印象が大きく変わり、成約率が前月比122%に上昇。</p>
+            </div>
+            <p>「ランチ後に寄っても歯がしみることなく、施術後すぐにカフェに戻れたので時間のロスがありませんでした。社内からも『印象が明るくなった』と声をかけてもらえました。」</p>
+          </div>
+          <div class="card">
+            <h3>Before → After</h3>
+            <p>初回施術前（シェードA3）</p>
+            <div style="height:160px;background:linear-gradient(90deg,#caa783 0%,#d8c3a6 100%);border-radius:12px;"></div>
+            <p>3回照射後（シェードB1）</p>
+            <div style="height:160px;background:linear-gradient(90deg,#fff8e1 0%,#fff2cc 100%);border-radius:12px;"></div>
+            <small>※効果には個人差があります。</small>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2 class="section-title">昼休み45分の施術フロー</h2>
+        <div class="timeline">
+          <div class="timeline-step">
+            <strong>1. カウンセリング（5分）</strong>
+            <p>口腔状態の確認とシェード測定。目標トーンと照射回数を決定。</p>
+          </div>
+          <div class="timeline-step">
+            <strong>2. プロフェッショナルクリーニング（10分）</strong>
+            <p>着色を除去し薬剤の浸透率を上げる前処理。</p>
+          </div>
+          <div class="timeline-step">
+            <strong>3. 痛みゼロ照射（20分）</strong>
+            <p>厚労省承認薬剤＋低温LED照射で知覚過敏を防止。個室でリラックス。</p>
+          </div>
+          <div class="timeline-step">
+            <strong>4. フッ素コート＆アフターケア（10分）</strong>
+            <p>照射後コートで歯質強化。施術直後の飲食・注意点を簡潔に案内。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container grid two">
+        <div class="card">
+          <h3>梅田で選ばれる理由</h3>
+          <ul class="list-check">
+            <li>院長は日本審美歯科学会所属。年間2,400件のホワイトニング症例。</li>
+            <li>厚生労働省承認薬剤と最新LED機器を使用。</li>
+            <li>全席個室。スーツのまま入退室できるプライベート空間。</li>
+            <li>施術後すぐ飲食可能なアフターケアと知覚過敏対策。</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>安心のサポート</h3>
+          <p>初回の知覚過敏リスクは0.6%。万が一しみた場合は再照射・薬剤調整を無料で対応。効果実感が得られない場合は次回施術を50%オフで提供します。</p>
+          <a href="#reserve" class="cta-btn ghost">医師カウンセリングを予約</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="plans">
+      <div class="container">
+        <h2 class="section-title">プランと料金（全て税込）</h2>
+        <div class="pricing-table">
+          <div class="price-card">
+            <h3>昼休みトライアル</h3>
+            <strong class="highlight">9,800円</strong>
+            <p>初回限定（通常13,000円）｜所要45分</p>
+            <ul class="list-check">
+              <li>シェード測定＋照射30分</li>
+              <li>知覚過敏ガードジェル</li>
+              <li>仕事復帰用ケアキット</li>
+            </ul>
+            <a href="#reserve" class="cta-btn primary">トライアルを予約</a>
+          </div>
+          <div class="price-card featured">
+            <span class="ribbon">人気No.1</span>
+            <h3>商談前集中コース</h3>
+            <strong class="highlight">29,800円</strong>
+            <p>2週間以内に3回照射｜週2通院可</p>
+            <ul class="list-check">
+              <li>カスタム照射設計</li>
+              <li>ホームケアキット付き</li>
+              <li>結果に満足いただけなければ4回目無料</li>
+            </ul>
+            <a href="#reserve" class="cta-btn primary">空き枠を確認する</a>
+          </div>
+          <div class="price-card">
+            <h3>年間メンテプラン</h3>
+            <strong class="highlight">月9,000円〜</strong>
+            <p>四半期ごとに来院・常にシェードB1をキープ</p>
+            <ul class="list-check">
+              <li>年間4回照射＋クリーニング</li>
+              <li>法人契約・同僚紹介割引あり</li>
+              <li>オンライン予約優先枠</li>
+            </ul>
+            <a href="#reserve" class="cta-btn secondary">プラン資料を請求</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2 class="section-title">梅田で働く皆さまの声</h2>
+        <div class="grid three">
+          <div class="testimonial">
+            <p>「商談の日程に合わせて2週間の集中ケア。黄ばみがなくなり、先方からも『すごく印象が明るいですね』と好反応でした。」</p>
+            <footer>外資IT営業・32歳（男性）</footer>
+          </div>
+          <div class="testimonial">
+            <p>「昼休みの45分で完結し、施術後すぐにランチに戻れました。痛みが全く無くて驚きました。」</p>
+            <footer>広告代理店・29歳（女性）</footer>
+          </div>
+          <div class="testimonial">
+            <p>「役員会議で話す機会が増え、歯の黄ばみが気になっていました。短期間で自然な白さになり満足しています。」</p>
+            <footer>コンサルティングファームマネージャー・38歳（男性）</footer>
+          </div>
+        </div>
+        <div style="margin-top:24px;text-align:center;">
+          <a href="#reserve" class="cta-btn ghost">口コミをもっと見る（Googleレビュー）</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="reserve">
+      <div class="container">
+        <h2 class="section-title">本日の空き枠とご予約</h2>
+        <div class="final-cta">
+          <p>仮予約は1分で完了。スタッフが30分以内に折り返し、お時間確定とカウンセリング内容をご案内します。</p>
+          <div class="calendar">
+            <div class="slot">
+              <strong>平日 昼枠</strong>
+              <span>12:10 / 13:00 / 13:50</span>
+              <small>残り3枠｜初回9,800円</small>
+            </div>
+            <div class="slot">
+              <strong>平日 夜枠</strong>
+              <span>18:30 / 19:30</span>
+              <small>お仕事帰りにスーツのまま来院OK</small>
+            </div>
+            <div class="slot">
+              <strong>土曜 朝枠</strong>
+              <span>9:30 / 10:30</span>
+              <small>翌週の商談・会議前に仕上げたい方へ</small>
+            </div>
+          </div>
+          <div class="cta-actions" style="justify-self:center;max-width:480px;width:100%;">
+            <a href="https://line.me" class="cta-btn primary" style="width:100%;">LINEで今すぐ仮予約する</a>
+            <a href="tel:0666666666" class="cta-btn secondary" style="width:100%;">お電話で予約（平日9:00-21:00）</a>
+          </div>
+          <p style="font-size:14px;color:var(--muted);">※持ち物不要・当日は保険証のみご持参ください。※薬剤・照射は全て厚労省承認の医療ホワイトニングです。</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>西川デンタルクリニック 梅田院｜大阪市北区梅田1-2-3（阪神百貨店向かい）</p>
+      <p>診療時間：平日 10:00-21:00 / 土曜 9:00-18:00｜休診：日曜・祝日</p>
+      <p>© Nishikawa Dental Clinic. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
