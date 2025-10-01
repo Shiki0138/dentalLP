@@ -31,7 +31,7 @@
     .container { width: min(1080px, 92vw); margin: 0 auto; }
 
     header {
-      background: linear-gradient(135deg, #0c2f3f 0%, #114b5f 60%, #0f3d51 100%);
+      background: radial-gradient(circle at 20% 20%, rgba(17,75,95,0.85), rgba(8,34,45,0.92));
       color: #fff;
       padding: 64px 0 48px;
       position: relative;
@@ -41,9 +41,8 @@
       content: '';
       position: absolute;
       inset: 0;
-      background: url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1600&q=80') no-repeat center/cover;
-      opacity: 0.2;
-      mix-blend-mode: lighten;
+      background: linear-gradient(to right, rgba(12,47,63,0.65), rgba(12,47,63,0.2)), url('https://images.unsplash.com/photo-1544723795-3fb6469f5b39?auto=format&fit=crop&w=1600&q=80') no-repeat center/cover;
+      opacity: 0.35;
       pointer-events: none;
     }
     header .container { position: relative; z-index: 1; display: grid; gap: 32px; }
@@ -59,6 +58,13 @@
       font-size: 14px;
     }
     .hero-cta { display: grid; gap: 18px; }
+    .hero-photo {
+      width: 100%;
+      height: clamp(220px, 28vw, 340px);
+      object-fit: cover;
+      border-radius: 20px;
+      box-shadow: 0 22px 38px rgba(12,45,58,0.32);
+    }
     .cta-box {
       background: #fff;
       color: var(--text);
@@ -221,6 +227,7 @@
         </ul>
       </div>
       <div class="hero-cta animate-batch">
+        <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1200&q=80" alt="笑顔で握手するビジネスパーソン" class="hero-photo" loading="lazy">
         <div class="cta-box">
           <h2>エグゼクティブ向け個別カウンセリング｜残り<span class="highlight">2</span>枠</h2>
           <p>仮予約は1分。法人契約やご家族紹介も可能。スタッフが30分以内に折り返し、最適な時間をご案内します。</p>
