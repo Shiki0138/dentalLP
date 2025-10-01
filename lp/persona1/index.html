@@ -189,6 +189,12 @@
       color: var(--primary);
       letter-spacing: 0.02em;
     }
+    .card-thumb {
+      width: 100%;
+      height: clamp(160px, 20vw, 220px);
+      object-fit: cover;
+      border-radius: 12px;
+    }
     .list-check {
       list-style: none;
       display: grid;
@@ -200,6 +206,12 @@
       color: var(--accent);
       font-weight: 700;
       margin-right: 8px;
+    }
+    .image-before {
+      filter: saturate(0.75) sepia(0.35) brightness(0.95);
+    }
+    .image-after {
+      box-shadow: 0 12px 22px rgba(26,60,142,0.15);
     }
     .story {
       border-left: 4px solid var(--accent);
@@ -385,6 +397,7 @@
           </ul>
         </div>
         <div class="card animate-batch">
+          <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=900&q=80" alt="歯科診療を丁寧に行う様子" class="card-thumb" loading="lazy">
           <h3>45分で仕事の合間に完結</h3>
           <p>大阪・梅田エリアで働く方が通いやすい立地。スーツのまま個室で施術を受けられ、施術後はケア方法をお伝えしたうえで飲食・外出が可能です。</p>
           <a href="#reserve" class="cta-btn ghost">商談前チェックリストをDL</a>
@@ -406,8 +419,8 @@
           </div>
           <div class="card animate-batch" style="gap:18px;">
             <h3>Before → After</h3>
-            <img src="https://images.unsplash.com/photo-1588776317788-3a83b67df9a6?auto=format&fit=crop&w=720&q=80" alt="施術前の歯の色合い" loading="lazy">
-            <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=720&q=80" alt="3回照射後の自然な白さ" loading="lazy">
+            <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=720&q=80" alt="施術前の歯の色合い" loading="lazy" class="image-before">
+            <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=720&q=80" alt="3回照射後の自然な白さ" loading="lazy" class="image-after">
             <small>※効果には個人差があります。</small>
           </div>
         </div>
