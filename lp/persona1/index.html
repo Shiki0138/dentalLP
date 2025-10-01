@@ -304,6 +304,9 @@
       font-size: 14px;
       text-align: center;
     }
+    .animate-batch {
+      will-change: opacity, transform;
+    }
     @media (min-width: 900px) {
       header .container {
         grid-template-columns: 3fr 2fr;
@@ -345,7 +348,7 @@
 <body>
   <header>
     <div class="container">
-      <div class="hero-headline">
+      <div class="hero-headline animate-batch">
         <h1>商談前45分で信頼度を底上げする<span class="highlight">梅田ホワイトニング</span></h1>
         <p>大阪市北区堂山町3-3 日本生命梅田ビル8Fの西川デンタルクリニックが提供するビジネスパーソン専用プログラム。痛みを抑えた医療ホワイトニングで、ランチタイムに自然な白さへ。</p>
         <ul class="badges">
@@ -355,7 +358,7 @@
           <li>Google口コミ ★4.8 / 312件</li>
         </ul>
       </div>
-      <div class="hero-cta">
+      <div class="hero-cta animate-batch">
         <div class="cta-box">
           <h2>平日昼枠 残り<span class="highlight">3</span>枠｜初回限定9,800円（通常13,000円）</h2>
           <p>仮予約は1分。スタッフが30分以内に折り返し、商談前のスケジュールに合わせて枠を確保します。</p>
@@ -370,9 +373,9 @@
   </header>
 
   <main>
-    <section>
+    <section class="animate-section">
       <div class="container grid two">
-        <div class="card">
+        <div class="card animate-batch">
           <h3>ビジネスシーンで増えているお悩み</h3>
           <ul class="list-check">
             <li>商談や会議で笑うと黄ばみが気になり集中できない。</li>
@@ -381,7 +384,7 @@
             <li>痛みや知覚過敏が怖くて歯科ホワイトニングに踏み出せない。</li>
           </ul>
         </div>
-        <div class="card">
+        <div class="card animate-batch">
           <h3>45分で仕事の合間に完結</h3>
           <p>大阪・梅田エリアで働く方が通いやすい立地。スーツのまま個室で施術を受けられ、施術後はケア方法をお伝えしたうえで飲食・外出が可能です。</p>
           <a href="#reserve" class="cta-btn ghost">商談前チェックリストをDL</a>
@@ -389,11 +392,11 @@
       </div>
     </section>
 
-    <section>
+    <section class="animate-section">
       <div class="container">
         <h2 class="section-title">成功事例｜営業Mさん（32歳・外資IT）</h2>
         <div class="grid two" style="align-items:center;">
-          <div>
+          <div class="animate-batch">
             <div class="story">
               <p><strong>課題：</strong>全国会議での登壇を控え、オンラインでも対面でも自信を持ちたい。</p>
               <p><strong>アクション：</strong>初回カウンセリング後、<span class="highlight">6営業日で3回照射</span>。ランチタイムと仕事終わりを交互に活用。</p>
@@ -401,7 +404,7 @@
             </div>
             <p>「ランチ後に寄ってもしみることがなく、施術後すぐにクライアントと打ち合わせできました。『印象が明るくなったね』と社内でも声をかけられ、次の大型案件も決まりました。」</p>
           </div>
-          <div class="card" style="gap:18px;">
+          <div class="card animate-batch" style="gap:18px;">
             <h3>Before → After</h3>
             <img src="https://images.unsplash.com/photo-1588776317788-3a83b67df9a6?auto=format&fit=crop&w=720&q=80" alt="施術前の歯の色合い" loading="lazy">
             <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=720&q=80" alt="3回照射後の自然な白さ" loading="lazy">
@@ -411,23 +414,23 @@
       </div>
     </section>
 
-    <section>
+    <section class="animate-section">
       <div class="container">
         <h2 class="section-title">昼休み45分の施術フロー</h2>
         <div class="timeline">
-          <div class="timeline-step">
+          <div class="timeline-step animate-batch">
             <strong>1. カウンセリング（5分）</strong>
             <p>口腔状態の確認とシェード測定。目標トーンと照射回数を医師が提案します。</p>
           </div>
-          <div class="timeline-step">
+          <div class="timeline-step animate-batch">
             <strong>2. プロフェッショナルクリーニング（10分）</strong>
             <p>着色除去とポリッシングで薬剤の浸透率を向上。</p>
           </div>
-          <div class="timeline-step">
+          <div class="timeline-step animate-batch">
             <strong>3. 照射（20分）</strong>
             <p>厚生労働省承認のホワイトニング薬剤と低温LED照射で、歯への負担を抑えながらトーンアップを図ります。</p>
           </div>
-          <div class="timeline-step">
+          <div class="timeline-step animate-batch">
             <strong>4. フッ素コート＆アフターケア（10分）</strong>
             <p>フッ素コートで歯質強化。施術直後の飲食・色戻り対策をその場でご案内。</p>
           </div>
@@ -435,9 +438,9 @@
       </div>
     </section>
 
-    <section>
+    <section class="animate-section">
       <div class="container grid two">
-        <div class="card">
+        <div class="card animate-batch">
           <h3>西川デンタルクリニックが選ばれる理由</h3>
           <ul class="list-check">
             <li>1977年開院。常勤2名・非常勤3名の歯科医師が専門ごとに連携。</li>
@@ -446,7 +449,7 @@
             <li>通院が難しい方向けに往診にも対応。</li>
           </ul>
         </div>
-        <div class="card">
+        <div class="card animate-batch">
           <h3>安心のサポート</h3>
           <p>施術前に口腔状態と希望トーンを確認し、照射後は歯質を守るケア方法を丁寧にご案内。しみが心配な方には薬剤調整やフッ素コートで対応します。</p>
           <a href="#reserve" class="cta-btn ghost">医師カウンセリングを予約</a>
@@ -454,11 +457,11 @@
       </div>
     </section>
 
-    <section id="plans">
+    <section id="plans" class="animate-section">
       <div class="container">
         <h2 class="section-title">プランと料金（全て税込）</h2>
         <div class="pricing-table">
-          <div class="price-card">
+          <div class="price-card animate-batch">
             <h3>昼休みトライアル</h3>
             <strong class="highlight">9,800円</strong>
             <p>初回限定（通常13,000円）｜所要45分</p>
@@ -469,7 +472,7 @@
             </ul>
             <a href="#reserve" class="cta-btn primary">トライアルを予約</a>
           </div>
-          <div class="price-card featured">
+          <div class="price-card featured animate-batch">
             <span class="ribbon">人気No.1</span>
             <h3>商談前集中コース</h3>
             <strong class="highlight">29,800円</strong>
@@ -481,7 +484,7 @@
             </ul>
             <a href="#reserve" class="cta-btn primary">空き枠を確認する</a>
           </div>
-          <div class="price-card">
+          <div class="price-card animate-batch">
             <h3>年間メンテプラン</h3>
             <strong class="highlight">月9,000円〜</strong>
             <p>四半期ごとに来院・常にシェードB1をキープ</p>
@@ -496,46 +499,46 @@
       </div>
     </section>
 
-    <section>
+    <section class="animate-section">
       <div class="container">
         <h2 class="section-title">梅田で働く皆さまの声</h2>
         <div class="grid three">
-          <div class="testimonial">
+          <div class="testimonial animate-batch">
             <p>「商談の日程に合わせて2週間の集中ケア。黄ばみがなくなり、先方からも『印象が明るいですね』と好反応でした。」</p>
             <footer>外資IT営業・32歳（男性）</footer>
           </div>
-          <div class="testimonial">
+          <div class="testimonial animate-batch">
             <p>「昼休みの45分で完結し、施術後すぐにランチへ戻れました。痛みが全く無くて安心でした。」</p>
             <footer>広告代理店・29歳（女性）</footer>
           </div>
-          <div class="testimonial">
+          <div class="testimonial animate-batch">
             <p>「役員会議で話す機会が増え、歯の黄ばみが気になっていました。短期間で自然な白さになり満足しています。」</p>
             <footer>コンサルティングファームマネージャー・38歳（男性）</footer>
           </div>
         </div>
-        <div style="margin-top:24px;text-align:center;">
+        <div style="margin-top:24px;text-align:center;" class="animate-batch">
           <a href="#reserve" class="cta-btn ghost">口コミをもっと見る（Googleレビュー）</a>
         </div>
       </div>
     </section>
 
-    <section id="reserve">
+    <section id="reserve" class="animate-section">
       <div class="container">
         <h2 class="section-title">本日の空き枠とご予約</h2>
-        <div class="final-cta">
+        <div class="final-cta animate-batch">
           <p>仮予約は1分。スタッフが30分以内に折り返し、お時間と施術内容をご提案します。</p>
           <div class="calendar">
-            <div class="slot">
+            <div class="slot animate-batch">
               <strong>平日 昼枠</strong>
               <span>12:10 / 13:00 / 13:50</span>
               <small>残り3枠｜初回9,800円</small>
             </div>
-            <div class="slot">
+            <div class="slot animate-batch">
               <strong>平日 夜枠</strong>
               <span>18:30 / 19:30</span>
               <small>お仕事帰りにスーツのまま来院OK</small>
             </div>
-            <div class="slot">
+            <div class="slot animate-batch">
               <strong>土曜 朝枠</strong>
               <span>9:30 / 10:30</span>
               <small>翌週の商談・会議前に仕上げたい方へ</small>
@@ -559,5 +562,49 @@
       <p>© Nishikawa Dental Clinic. All rights reserved.</p>
     </div>
   </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" integrity="sha384-/1v9yN5Q59VXdwPilL0G1U82vakdYleUZiUiD5fD8Jv5UYWpw9spzW6vzk8dJht7" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" integrity="sha384-ydz0yD1u4m3rmyWWQYr42lpu7IauiSkk4L0Ff5KaM11xyy5f7jJ9BBwbyuYImKe7" crossorigin="anonymous"></script>
+  <script>
+    (function () {
+      const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+      if (prefersReducedMotion.matches || !window.gsap) return;
+
+      gsap.registerPlugin(ScrollTrigger);
+
+      gsap.from('.hero-headline', {
+        opacity: 0,
+        y: 32,
+        duration: 0.9,
+        ease: 'power2.out'
+      });
+
+      gsap.from('.hero-cta', {
+        opacity: 0,
+        y: 36,
+        duration: 0.9,
+        delay: 0.2,
+        ease: 'power2.out'
+      });
+
+      gsap.utils.toArray('.animate-section').forEach(function (section) {
+        const targets = section.querySelectorAll('.animate-batch');
+        if (!targets.length) return;
+
+        gsap.from(targets, {
+          opacity: 0,
+          y: 28,
+          duration: 0.8,
+          ease: 'power2.out',
+          stagger: 0.12,
+          scrollTrigger: {
+            trigger: section,
+            start: 'top 72%',
+            once: true
+          }
+        });
+      });
+    })();
+  </script>
 </body>
 </html>
