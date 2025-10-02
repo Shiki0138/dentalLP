@@ -82,6 +82,67 @@
       display: grid;
       gap: 16px;
     }
+    .hero-visual {
+      position: relative;
+      overflow: hidden;
+      border-radius: 28px;
+      min-height: clamp(220px, 32vw, 380px);
+      background: linear-gradient(140deg, rgba(15,58,122,0.85), rgba(6,21,53,0.92));
+      box-shadow: 0 22px 48px rgba(7,24,58,0.32);
+      display: grid;
+      place-items: center;
+      color: rgba(255,255,255,0.92);
+      text-align: center;
+      padding: 32px;
+    }
+    .hero-visual::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 65% 35%, rgba(255,255,255,0.18), transparent 55%), linear-gradient(120deg, rgba(255,255,255,0.08), rgba(255,255,255,0));
+      pointer-events: none;
+    }
+    .hero-visual .mock-label {
+      position: absolute;
+      top: 18px;
+      right: 18px;
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.15);
+      border: 1px solid rgba(255,255,255,0.25);
+    }
+    .hero-visual h3 {
+      font-size: clamp(20px, 3vw, 28px);
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+    .hero-visual p {
+      max-width: 420px;
+      margin: 0 auto;
+      line-height: 1.7;
+      font-size: 15px;
+    }
+    .hero-visual .mock-image {
+      width: clamp(180px, 28vw, 280px);
+      height: clamp(180px, 28vw, 280px);
+      border-radius: 50%;
+      background: conic-gradient(from -90deg, #ffffff 0deg, #dfe9ff 160deg, #ffffff 360deg);
+      box-shadow: inset -18px -18px 32px rgba(12,34,60,0.15), inset 12px 12px 24px rgba(255,255,255,0.45);
+      margin-bottom: 24px;
+      position: relative;
+    }
+    .hero-visual .mock-image::after {
+      content: 'Image Here';
+      position: absolute;
+      inset: 0;
+      display: grid;
+      place-items: center;
+      color: rgba(13,31,62,0.55);
+      font-size: 14px;
+      letter-spacing: 0.12em;
+    }
     .hero-panel h2 { font-size: 20px; font-weight: 700; }
     .hero-panel .price-badge {
       display: inline-flex;
@@ -156,6 +217,29 @@
       font-size: 15px;
     }
     .story strong { color: var(--primary); }
+    .whiten-scale {
+      margin-top: 18px;
+      display: grid;
+      gap: 12px;
+    }
+    .whiten-scale .bar {
+      position: relative;
+      height: 16px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, #c9b097 0%, #f3ebd9 45%, #ffffff 100%);
+      box-shadow: inset 0 0 8px rgba(0,0,0,0.12);
+    }
+    .whiten-scale .bar::after {
+      content: '';
+      position: absolute;
+      top: -6px;
+      left: 62%;
+      width: 2px;
+      height: 28px;
+      background: var(--accent);
+      border-radius: 2px;
+    }
+    .whiten-scale small { display: flex; justify-content: space-between; font-size: 12px; color: var(--muted); }
 
     .timeline { display: grid; gap: 18px; }
     .timeline-step { background: #fff; border-radius: 14px; border: 1px solid var(--border); padding: 18px; box-shadow: 0 12px 22px rgba(11,30,62,0.08); }
@@ -218,17 +302,23 @@
           <li>Google口コミ ★4.8 / 312件</li>
         </ul>
       </div>
-      <div class="hero-panel animate-batch">
-        <span class="price-badge">初回限定オフィスホワイトニング 9,000円（税込）</span>
-        <h2>平日昼枠 残り <span class="highlight">3</span> 枠｜ビジネスホワイトニング体験</h2>
-        <p>仮予約は1分。スタッフが30分以内に折り返し、ランチタイムや会議前のスケジュールに合わせてご提案します。</p>
-        <div class="hero-actions">
-          <a href="#reserve" class="cta-btn primary">本日の空き枠を確認</a>
-          <a href="#reserve" class="cta-btn secondary">LINEで24時間相談</a>
-          <a href="tel:0663158148" class="cta-btn ghost">今すぐ電話：06-6315-8148</a>
+        <div class="hero-panel animate-batch">
+          <span class="price-badge">初回限定オフィスホワイトニング 9,000円（税込）</span>
+          <h2>平日昼枠 残り <span class="highlight">3</span> 枠｜ビジネスホワイトニング体験</h2>
+          <p>仮予約は1分。スタッフが30分以内に折り返し、ランチタイムや会議前のスケジュールに合わせてご提案します。</p>
+          <div class="hero-actions">
+            <a href="#reserve" class="cta-btn primary">本日の空き枠を確認</a>
+            <a href="#reserve" class="cta-btn secondary">LINEで24時間相談</a>
+            <a href="tel:0663158148" class="cta-btn ghost">今すぐ電話：06-6315-8148</a>
+          </div>
+          <p style="font-size:13px;color:var(--muted);">※厚生労働省承認の医療ホワイトニング薬剤を使用。施術後は飲食可のケア方法をお伝えします。</p>
         </div>
-        <p style="font-size:13px;color:var(--muted);">※厚生労働省承認の医療ホワイトニング薬剤を使用。施術後は飲食可のケア方法をお伝えします。</p>
-      </div>
+        <div class="hero-visual animate-batch">
+          <span class="mock-label">Visual Placeholder</span>
+          <div class="mock-image"></div>
+          <h3>“白さ”が伝わる第一印象を演出</h3>
+          <p>整ったビジネススーツと自然な白い歯をイメージ。実際の写真は後日ご提供いただき、こちらに差し替え可能です。</p>
+        </div>
     </div>
   </header>
 
@@ -287,6 +377,10 @@
               <p><strong>結果：</strong>商談成約率が122%アップ。社内でも「印象が明るい」と声をかけられた。</p>
             </div>
             <p>「昼休みに通えて、施術後すぐにカフェでクライアントと打ち合わせできました。歯科医師が毎回シェードをチェックしてくれるので安心です。」</p>
+            <div class="whiten-scale">
+              <div class="bar"></div>
+              <small><span>Before (A3)</span><span>After (B1)</span></small>
+            </div>
           </div>
           <div class="card animate-batch" style="gap:18px;">
             <h3>施術の流れ</h3>
