@@ -55,11 +55,17 @@
     .intro-location { color: var(--muted); margin-top: 4px; }
     .intro-info { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; font-size: 15px; }
     .intro-info span { background: #eef3fb; border-radius: 999px; padding: 10px 18px; font-weight: 700; color: var(--primary); }
-    .intro-lead { margin-top: clamp(24px, 4vw, 32px); font-size: clamp(16px, 2.2vw, 18px); color: var(--muted); max-width: 720px; }
+    .intro-lead {
+      margin-top: clamp(24px, 4vw, 32px);
+      font-size: clamp(16px, 2.2vw, 18px);
+      color: var(--muted);
+      max-width: 680px;
+      line-height: 1.75;
+    }
     .intro-points { margin: clamp(20px, 4vw, 28px) 0; padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: 10px; }
     .intro-points li { background: rgba(15,76,129,0.08); color: var(--primary); border-radius: 999px; padding: 8px 18px; font-size: 14px; font-weight: 600; }
     .intro-cta { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; }
-    .intro-cta .btn { display: inline-flex; align-items: center; gap: 10px; padding: 14px 24px; border-radius: 12px; font-weight: 700; font-size: 15px; box-shadow: 0 16px 28px rgba(12,32,64,0.12); transition: transform 0.2s ease, box-shadow 0.2s ease; }
+    .intro-cta .btn { display: inline-flex; align-items: center; gap: 10px; padding: 14px 24px; border-radius: 12px; font-weight: 700; font-size: 15px; box-shadow: 0 12px 24px rgba(12,32,64,0.1); transition: transform 0.2s ease, box-shadow 0.2s ease; }
     .intro-cta .btn.primary { background: var(--primary); color: #fff; }
     .intro-cta .btn.secondary { background: #fff; color: var(--primary); border: 1px solid rgba(15,76,129,0.2); }
     .intro-cta .btn:hover { transform: translateY(-2px); box-shadow: 0 20px 36px rgba(12,35,70,0.16); }
@@ -93,9 +99,9 @@
     .reason-card {
       background: #fff;
       border-radius: 22px;
-      padding: 28px;
+      padding: 26px;
       border: 1px solid #dce5f2;
-      box-shadow: 0 20px 36px rgba(12,40,78,0.12);
+      box-shadow: 0 18px 30px rgba(12,40,78,0.1);
       display: grid;
       gap: 14px;
     }
@@ -110,18 +116,18 @@
       position: relative;
       background: #fff;
       border-radius: 20px;
-      padding: 20px 18px 20px 28px;
+      padding: 30px 22px 20px 26px;
       border: 1px solid #dbe4f4;
-      box-shadow: 0 16px 30px rgba(16,52,96,0.1);
+      box-shadow: 0 14px 26px rgba(16,52,96,0.08);
     }
     .timeline-item strong { font-size: 15px; color: var(--primary); }
     .timeline-item span {
       position: absolute;
       top: 18px;
       left: 16px;
-      font-size: 12px;
+      font-size: 13px;
       font-weight: 700;
-      color: rgba(16,28,52,0.5);
+      color: var(--primary);
     }
 
     .plan-grid {
@@ -133,9 +139,9 @@
       position: relative;
       background: #fff;
       border-radius: 24px;
-      padding: 30px;
+      padding: 28px;
       border: 1px solid #dfe5f2;
-      box-shadow: 0 22px 40px rgba(13,48,92,0.12);
+      box-shadow: 0 20px 36px rgba(13,48,92,0.11);
       display: grid;
       gap: 16px;
     }
@@ -161,9 +167,9 @@
     .testimonial-card {
       background: #fff;
       border-radius: 22px;
-      padding: 26px;
+      padding: 24px;
       border: 1px solid #e1e9f5;
-      box-shadow: 0 18px 34px rgba(12,45,88,0.11);
+      box-shadow: 0 16px 30px rgba(12,45,88,0.1);
       display: grid;
       gap: 12px;
     }
@@ -176,7 +182,32 @@
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       align-items: center;
     }
+    .media-pair figure { margin: 0; }
+    .media-pair img { max-width: 520px; width: 100%; margin: 0 auto; }
     .media-note { font-size: 13px; color: var(--muted); margin-top: 12px; }
+
+    .mock-image {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 10;
+      border-radius: 22px;
+      border: 2px dashed rgba(15,76,129,0.3);
+      background: repeating-linear-gradient(135deg, rgba(15,76,129,0.08), rgba(15,76,129,0.08) 12px, rgba(255,255,255,0.6) 12px, rgba(255,255,255,0.6) 24px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: rgba(15,76,129,0.55);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      text-align: center;
+      padding: 16px;
+    }
+    .mock-image::after {
+      content: attr(data-label);
+      font-size: 14px;
+    }
+    .mock-image.mock-image--wide { aspect-ratio: 21 / 9; }
 
     .step-flow { display: grid; gap: 22px; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); counter-reset: step; }
     .step-card {
@@ -269,6 +300,8 @@
     }
     @media (max-width: 720px) {
       .intro-cta .btn { width: 100%; justify-content: center; }
+      .cta-panel__actions .btn { width: 100%; justify-content: center; max-width: 320px; }
+      .cta-panel__actions { flex-direction: column; align-items: center; }
       .timeline { grid-template-columns: 1fr; }
       .timeline-item { padding-left: 24px; }
       .timeline-item span { position: static; display: block; margin-bottom: 6px; }
@@ -297,7 +330,7 @@
           <span>診療 10:00-13:00／14:00-19:00（火・木は18:30まで）</span>
         </div>
       </div>
-      <p class="intro-lead">「お昼休みの60分でサッと整える」をテーマに、働く女性を中心に支持されているオフィスホワイトニング。Hot Pepper Beauty 限定の初回9,000円でまずはトライできます。</p>
+      <p class="intro-lead">「お昼休みの60分でサッと整える」。働く女性を中心に支持されているオフィスホワイトニングを、Hot Pepper Beauty 限定の初回9,000円で体験いただけます。</p>
       <ul class="intro-points">
         <li>初回 9,000円（Hot Pepper Beauty）</li>
         <li>歯科医・歯科衛生士が丁寧にサポート</li>
@@ -335,6 +368,7 @@
     <div class="container">
       <h2 class="section-title">働く女性のランチタイム活用例</h2>
       <p class="section-lead">昼休みの1時間でここまでできる。カウンセリングから施術、メイク直しまでの流れをご紹介します。</p>
+      <div class="mock-image mock-image--wide" data-label="Timeline Illustration Placeholder"></div>
       <div class="timeline">
         <div class="timeline-item">
           <span>12:00</span>
@@ -405,17 +439,17 @@
       <div class="testimonial-grid">
         <article class="testimonial-card">
           <h3>挙式1か月前に即効性を実感</h3>
-          <p>「結婚式前にオフィスホワイトニング3回コースを選択。初回からトーンアップし、レントゲンで虫歯のチェックまでしてもらえました。ホワイトニング以外の治療も任せたいと思える歯医者さんです。」</p>
+          <p>結婚式前にオフィスホワイトニング3回コースを選択し、初回からトーンアップ。レントゲンで虫歯の確認まで行ってくれたので、今後のケアも任せたいという声をいただいています。</p>
           <footer>30代前半 女性／オフィスホワイトニング＋クリーニング／価格帯 4〜5万円</footer>
         </article>
         <article class="testimonial-card">
           <h3>当日予約でもスムーズに案内</h3>
-          <p>「急な休みに合わせて予約。クーポン説明の後に1回コースを受けましたが、その場でしっかり白くなりました。虫歯チェックまで行ってくれて安心。」</p>
+          <p>急な休みに合わせて予約し、説明後に1回コースを受けてその場で白さを実感。虫歯のチェックまでしてもらえて安心だったと評価されています。</p>
           <footer>20代後半 女性／オフィスホワイトニング1回／価格帯 1〜2万円</footer>
         </article>
         <article class="testimonial-card">
           <h3>旅行ついででも丁寧な対応</h3>
-          <p>「大阪旅行の合間に初回クーポンで施術。クリーニングと虫歯治療も同時に対応いただき、他院では感じなかった白さを実感。次の機会もお願いしたいです。」</p>
+          <p>出張・旅行の合間に初回クーポンで来院し、クリーニングと虫歯治療も同時に対応。他院では感じなかった白さを実感し、次回も利用したいとの感想をいただきました。</p>
           <footer>30代前半 女性／ホワイトニング＋虫歯治療／価格帯 1〜2万円</footer>
         </article>
       </div>
@@ -427,11 +461,11 @@
       <h2 class="section-title">仕上がりイメージと施術風景</h2>
       <div class="media-pair">
         <figure>
-          <img src="img/results/before-after_lunchwhite.webp" alt="働く女性のホワイトニング前後のイメージ">
+          <div class="mock-image" data-label="Before / After Image Placeholder"></div>
           <figcaption class="media-note">※画像はイメージです。効果には個人差があります。</figcaption>
         </figure>
         <figure>
-          <img src="img/clinic/whitening-session.webp" alt="歯科衛生士がホワイトニングを行う様子">
+          <div class="mock-image" data-label="Whitening Session Photo Placeholder"></div>
           <figcaption class="media-note">歯科衛生士が歯の状態を確認しながら施術。違和感があればすぐに調整します。</figcaption>
         </figure>
       </div>
@@ -580,7 +614,7 @@
       </table>
       <div style="margin-top:32px; display:grid; gap:24px; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));">
         <figure>
-          <img src="img/clinic/reception.webp" alt="西川デンタルクリニックの受付と待合室">
+          <div class="mock-image" data-label="Clinic Reception Photo Placeholder"></div>
           <figcaption class="media-note">落ち着いた待合スペースで、初めての方でも緊張せずお過ごしいただけます。</figcaption>
         </figure>
         <iframe title="西川デンタルクリニック 地図" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1640.0540504025219!2d135.5019302563895!3d34.70245328043417!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000e6eb31225687%3A0xc0bb4dc4a2756f9c!2z5pel5pys5biC5YyX5Yy65aCC5bGx55S677yT4oiS77yTIOaXpeacrOeUn-WRveaiheeUsOODk-ODqyA4Rg!5e0!3m2!1sja!2sjp!4v1529983016754" width="100%" height="360" style="border:0;border-radius:22px; box-shadow:0 18px 32px rgba(12,45,88,0.14);" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
