@@ -37,6 +37,7 @@
     .container { width: min(1120px, 92vw); margin: 0 auto; }
 
     header.hero { margin: 0; }
+    header.hero picture { display: block; }
     header.hero img {
       width: 100%;
       height: auto;
@@ -186,28 +187,50 @@
     .media-pair img { max-width: 520px; width: 100%; margin: 0 auto; }
     .media-note { font-size: 13px; color: var(--muted); margin-top: 12px; }
 
-    .mock-image {
+    .concern-section {
       position: relative;
-      width: 100%;
-      aspect-ratio: 16 / 10;
-      border-radius: 22px;
-      border: 2px dashed rgba(15,76,129,0.3);
-      background: repeating-linear-gradient(135deg, rgba(15,76,129,0.08), rgba(15,76,129,0.08) 12px, rgba(255,255,255,0.6) 12px, rgba(255,255,255,0.6) 24px);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: rgba(15,76,129,0.55);
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
+      color: #fff;
+      background: url('img/sample/スクリーンショット 2025-10-21 11.08.40.webp') center/cover no-repeat;
+      padding: clamp(72px, 14vw, 120px) 0;
+    }
+    .concern-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(6,28,56,0.72), rgba(6,28,56,0.88));
+    }
+    .concern-content {
+      position: relative;
+      z-index: 1;
+      max-width: 680px;
+      margin: 0 auto;
+      display: grid;
+      gap: clamp(18px, 3vw, 28px);
+      text-align: left;
+    }
+    .concern-title {
+      font-size: clamp(28px, 5vw, 42px);
       text-align: center;
-      padding: 16px;
+      line-height: 1.4;
     }
-    .mock-image::after {
-      content: attr(data-label);
-      font-size: 14px;
+    .concern-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      gap: 14px;
+      font-size: clamp(16px, 2.4vw, 18px);
     }
-    .mock-image.mock-image--wide { aspect-ratio: 21 / 9; }
+    .concern-list li {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+    }
+    .concern-list li::before {
+      content: '✓';
+      font-size: 20px;
+      color: #6dd1ff;
+      margin-top: 2px;
+    }
 
     .step-flow { display: grid; gap: 22px; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); counter-reset: step; }
     .step-card {
@@ -305,8 +328,9 @@
       .timeline { grid-template-columns: 1fr; }
       .timeline-item { padding-left: 24px; }
       .timeline-item span { position: static; display: block; margin-bottom: 6px; }
-      .floating-cta { right: 12px; bottom: 12px; }
-      .page-top { right: 12px; bottom: 12px; }
+      .floating-cta { right: 10px; bottom: 10px; padding: 14px; width: min(240px, 88vw); gap: 10px; }
+      .floating-cta .btn { padding: 10px 14px; font-size: 14px; }
+      .page-top { right: 10px; bottom: 10px; }
       .intro { padding: 48px 0; }
     }
   </style>
@@ -315,7 +339,10 @@
 <a id="top"></a>
 <div class="wrapper">
   <header class="hero" aria-hidden="true">
-    <img src="img/hero/lunch-break-whitening.webp" alt="お昼休みから始めるオフィスホワイトニングのイメージ">
+    <picture>
+      <source media="(max-width: 720px)" srcset="img/hero/mobile_hero.webp">
+      <img src="img/hero/lunch-break-whitening.webp" alt="お昼休みから始めるオフィスホワイトニングのイメージ">
+    </picture>
   </header>
 
   <section class="intro">
@@ -344,6 +371,22 @@
     </div>
   </section>
 
+  <section class="concern-section">
+    <div class="concern-overlay"></div>
+    <div class="container">
+      <div class="concern-content">
+        <h2 class="concern-title">こんなお悩みありませんか？</h2>
+        <ul class="concern-list">
+          <li>黄色っぽい歯が気になる。</li>
+          <li>口をあけて笑うのに抵抗がある。</li>
+          <li>人と接するときに自信が持てない。</li>
+          <li>サロンのホワイトニングで白くならなかった。</li>
+          <li>加齢とともに歯が黄ばんできた気がする。</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
   <section>
     <div class="container">
       <h2 class="section-title">お昼休みホワイトニングが選ばれる3つの理由</h2>
@@ -368,7 +411,6 @@
     <div class="container">
       <h2 class="section-title">働く女性のランチタイム活用例</h2>
       <p class="section-lead">昼休みの1時間でここまでできる。カウンセリングから施術、メイク直しまでの流れをご紹介します。</p>
-      <div class="mock-image mock-image--wide" data-label="Timeline Illustration Placeholder"></div>
       <div class="timeline">
         <div class="timeline-item">
           <span>12:00</span>
@@ -434,6 +476,36 @@
 
   <section>
     <div class="container">
+      <h2 class="section-title">ホワイトニングについて</h2>
+      <div class="media-pair" style="grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));">
+        <figure>
+          <img src="img/clinic/ChatGPT Image 2025年10月21日 11_15_26.webp" alt="ホワイトニングの流れを説明する図解イメージ">
+          <figcaption class="media-note">気になることは歯科医師または歯科衛生士に何でもご相談ください。お時間を気にせず丁寧にご説明いたします。</figcaption>
+        </figure>
+        <div>
+          <article class="plan-card" data-tag="Basic">
+            <h3>ホワイトニングとは？</h3>
+            <p>歯を削らずに薬剤で色素を分解し、本来の白さを取り戻す“歯の漂白”です。短期間で効果を実感できるオフィスホワイトニングと、ご自宅で続けるホームホワイトニングをご用意しています。</p>
+          </article>
+          <article class="plan-card" data-tag="Method">
+            <h3>施術スタイルの違い</h3>
+            <ul>
+              <li><strong>オフィス：</strong> 医療用の高濃度薬剤で数回の通院。歯科医師・歯科衛生士が直接サポート。</li>
+              <li><strong>ホーム：</strong> 専用トレーとジェルで1日2〜8時間のケアを2〜4週間継続。時間を選ばずに続けられます。</li>
+            </ul>
+          </article>
+          <article class="plan-card" data-tag="Safety">
+            <h3>安全性と注意事項</h3>
+            <p>過酸化尿素・過酸化水素は長年口腔消毒に使われてきた薬剤です。まれに知覚過敏などの違和感が出ることがありますが、多くは一時的で、施術を調整することで軽減できます。</p>
+            <p style="font-size:13px; color:var(--muted);">※妊娠・授乳中、薬剤アレルギー、重い知覚過敏がある方、原因によっては適用外となる場合があります。詳細はスタッフへご相談ください。</p>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
       <h2 class="section-title">口コミでわかる安心感</h2>
       <p class="section-lead">Hot Pepper Beauty とGoogle口コミで、施術後の満足度は平均4.8以上。丁寧な説明と即効性をご評価いただいています。</p>
       <div class="testimonial-grid">
@@ -459,13 +531,9 @@
   <section>
     <div class="container">
       <h2 class="section-title">仕上がりイメージと施術風景</h2>
-      <div class="media-pair">
+      <div class="media-pair" style="grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));">
         <figure>
-          <div class="mock-image" data-label="Before / After Image Placeholder"></div>
-          <figcaption class="media-note">※画像はイメージです。効果には個人差があります。</figcaption>
-        </figure>
-        <figure>
-          <div class="mock-image" data-label="Whitening Session Photo Placeholder"></div>
+          <img src="img/clinic/20191204a04.webp" alt="歯科衛生士がホワイトニング施術を行っている様子">
           <figcaption class="media-note">歯科衛生士が歯の状態を確認しながら施術。違和感があればすぐに調整します。</figcaption>
         </figure>
       </div>
@@ -613,10 +681,6 @@
         </tbody>
       </table>
       <div style="margin-top:32px; display:grid; gap:24px; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));">
-        <figure>
-          <div class="mock-image" data-label="Clinic Reception Photo Placeholder"></div>
-          <figcaption class="media-note">落ち着いた待合スペースで、初めての方でも緊張せずお過ごしいただけます。</figcaption>
-        </figure>
         <iframe title="西川デンタルクリニック 地図" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1640.0540504025219!2d135.5019302563895!3d34.70245328043417!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000e6eb31225687%3A0xc0bb4dc4a2756f9c!2z5pel5pys5biC5YyX5Yy65aCC5bGx55S677yT4oiS77yTIOaXpeacrOeUn-WRveaiheeUsOODk-ODqyA4Rg!5e0!3m2!1sja!2sjp!4v1529983016754" width="100%" height="360" style="border:0;border-radius:22px; box-shadow:0 18px 32px rgba(12,45,88,0.14);" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
     </div>
