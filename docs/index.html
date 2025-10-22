@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>西川デンタルクリニック｜お昼休みで叶えるオフィスホワイトニング</title>
+  <meta name="description" content="大阪・東梅田の西川デンタルクリニック。働く女性に人気のお昼休みオフィスホワイトニング。初回9,000円、歯科医師と歯科衛生士のサポートで短期間でも自信のある笑顔へ。">
+  <meta name="keywords" content="西川デンタルクリニック,ホワイトニング,東梅田,オフィスホワイトニング,昼休みホワイトニング">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+Antique:wght@500;700;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #0f4c81;
+      --primary-dark: #0a355d;
+      --accent: #ffaa1d;
+      --bg: #f4f7fb;
+      --text: #101c34;
+      --muted: #6b7a93;
+      --radius-lg: 24px;
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Zen Kaku Gothic Antique", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+      color: var(--text);
+      background: #fff;
+      line-height: 1.7;
+    }
+    img { max-width: 100%; display: block; border-radius: 16px; }
+    a { color: inherit; text-decoration: none; }
+    p { margin: 0 0 1rem; }
+    h1, h2, h3, h4 { margin: 0; font-family: "Zen Kaku Gothic Antique", sans-serif; }
+
+    .wrapper { overflow: hidden; }
+    .container { width: min(1120px, 92vw); margin: 0 auto; }
+
+    header.hero { margin: 0; }
+    header.hero picture { display: block; }
+    header.hero img {
+      width: 100%;
+      height: auto;
+      display: block;
+      vertical-align: middle;
+    }
+    .intro { padding: clamp(40px, 8vw, 72px) 0; }
+    .intro-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .intro-title h1 { font-size: clamp(26px, 4vw, 34px); }
+    .intro-location { color: var(--muted); margin-top: 4px; }
+    .intro-info { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; font-size: 15px; }
+    .intro-info span { background: #eef3fb; border-radius: 999px; padding: 10px 18px; font-weight: 700; color: var(--primary); }
+    .intro-lead {
+      margin-top: clamp(24px, 4vw, 32px);
+      font-size: clamp(16px, 2.2vw, 18px);
+      color: var(--muted);
+      max-width: 680px;
+      line-height: 1.75;
+    }
+    .intro-points { margin: clamp(20px, 4vw, 28px) 0; padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: 10px; }
+    .intro-points li { background: rgba(15,76,129,0.08); color: var(--primary); border-radius: 999px; padding: 8px 18px; font-size: 14px; font-weight: 600; }
+    .intro-cta { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; }
+    .intro-cta .btn { display: inline-flex; align-items: center; gap: 10px; padding: 14px 24px; border-radius: 12px; font-weight: 700; font-size: 15px; box-shadow: 0 12px 24px rgba(12,32,64,0.1); transition: transform 0.2s ease, box-shadow 0.2s ease; }
+    .intro-cta .btn.primary { background: var(--primary); color: #fff; }
+    .intro-cta .btn.secondary { background: #fff; color: var(--primary); border: 1px solid rgba(15,76,129,0.2); }
+    .intro-cta .btn:hover { transform: translateY(-2px); box-shadow: 0 20px 36px rgba(12,35,70,0.16); }
+    .cta-panel {
+      background: #f0f6ff;
+      border-radius: 24px;
+      border: 1px solid #d0e1f6;
+      box-shadow: 0 22px 40px rgba(13,48,92,0.12);
+      padding: clamp(32px, 5vw, 48px);
+      display: grid;
+      gap: 18px;
+    }
+    .cta-panel__actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: center;
+    }
+    .intro-meta { margin-top: 12px; font-size: 13px; color: var(--muted); }
+
+    section { padding: clamp(64px, 12vw, 100px) 0; }
+    section:nth-of-type(even) { background: var(--bg); }
+    .section-title { text-align: center; font-size: clamp(26px, 4vw, 36px); margin-bottom: clamp(32px, 6vw, 48px); }
+    .section-lead { text-align: center; max-width: 760px; margin: 0 auto clamp(36px, 5vw, 48px); color: var(--muted); }
+
+    .reason-grid {
+      display: grid;
+      gap: 24px;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    }
+    .reason-card {
+      background: #fff;
+      border-radius: 22px;
+      padding: 26px;
+      border: 1px solid #dce5f2;
+      box-shadow: 0 18px 30px rgba(12,40,78,0.1);
+      display: grid;
+      gap: 14px;
+    }
+    .reason-card h3 { font-size: 18px; color: var(--primary); }
+
+    .timeline {
+      display: grid;
+      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+    .timeline-item {
+      position: relative;
+      background: #fff;
+      border-radius: 20px;
+      padding: 30px 22px 20px 26px;
+      border: 1px solid #dbe4f4;
+      box-shadow: 0 14px 26px rgba(16,52,96,0.08);
+    }
+    .timeline-item strong { font-size: 15px; color: var(--primary); }
+    .timeline-item span {
+      position: absolute;
+      top: 18px;
+      left: 16px;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    .plan-grid {
+      display: grid;
+      gap: 24px;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+    .plan-card {
+      position: relative;
+      background: #fff;
+      border-radius: 24px;
+      padding: 28px;
+      border: 1px solid #dfe5f2;
+      box-shadow: 0 20px 36px rgba(13,48,92,0.11);
+      display: grid;
+      gap: 16px;
+    }
+    .plan-card::before {
+      content: attr(data-tag);
+      position: absolute;
+      top: -12px;
+      left: 18px;
+      background: var(--primary);
+      color: #fff;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 6px 12px;
+      border-radius: 999px;
+    }
+    .plan-card ul { margin: 0; padding-left: 20px; color: var(--muted); font-size: 14px; }
+
+    .testimonial-grid {
+      display: grid;
+      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    }
+    .testimonial-card {
+      background: #fff;
+      border-radius: 22px;
+      padding: 24px;
+      border: 1px solid #e1e9f5;
+      box-shadow: 0 16px 30px rgba(12,45,88,0.1);
+      display: grid;
+      gap: 12px;
+    }
+    .testimonial-card h3 { font-size: 18px; color: var(--primary-dark); }
+    .testimonial-card footer { font-size: 13px; color: var(--muted); }
+
+    .media-pair {
+      display: grid;
+      gap: 24px;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      align-items: center;
+    }
+    .media-pair figure { margin: 0; }
+    .media-pair img { max-width: 520px; width: 100%; margin: 0 auto; }
+    .media-note { font-size: 13px; color: var(--muted); margin-top: 12px; }
+
+    .concern-section {
+      position: relative;
+      color: #fff;
+      background: url('img/sample/スクリーンショット 2025-10-21 11.08.40.webp') center/cover no-repeat;
+      padding: clamp(72px, 14vw, 120px) 0;
+    }
+    .concern-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(6,28,56,0.72), rgba(6,28,56,0.88));
+    }
+    .concern-content {
+      position: relative;
+      z-index: 1;
+      max-width: 680px;
+      margin: 0 auto;
+      display: grid;
+      gap: clamp(18px, 3vw, 28px);
+      text-align: left;
+    }
+    .concern-title {
+      font-size: clamp(28px, 5vw, 42px);
+      text-align: center;
+      line-height: 1.4;
+    }
+    .concern-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      gap: 14px;
+      font-size: clamp(16px, 2.4vw, 18px);
+    }
+    .concern-list li {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+    }
+    .concern-list li::before {
+      content: '✓';
+      font-size: 20px;
+      color: #6dd1ff;
+      margin-top: 2px;
+    }
+
+    .step-flow { display: grid; gap: 22px; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); counter-reset: step; }
+    .step-card {
+      position: relative;
+      background: #fff;
+      border-radius: 22px;
+      padding: 26px 22px 24px 30px;
+      border: 1px solid #dce4f3;
+      box-shadow: 0 16px 28px rgba(10,35,72,0.1);
+    }
+    .step-card::before {
+      counter-increment: step;
+      content: "STEP " counter(step);
+      position: absolute;
+      top: -12px;
+      left: 18px;
+      background: var(--primary);
+      color: #fff;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 6px 12px;
+      border-radius: 999px;
+    }
+
+    table { width: 100%; border-collapse: separate; border-spacing: 0; }
+    .price-table { border-radius: 22px; border: 1px solid #d9e2f0; overflow: hidden; }
+    .price-table thead { background: var(--primary); color: #fff; }
+    .price-table th, .price-table td { padding: 18px; text-align: left; font-size: 15px; }
+    .price-table tbody tr:nth-child(odd) { background: #f7fbff; }
+
+    details { background: #fff; border-radius: 18px; border: 1px solid #e0e9f5; padding: 18px 24px; margin-bottom: 14px; box-shadow: 0 12px 24px rgba(12,38,72,0.08); }
+    summary { cursor: pointer; font-weight: 700; color: var(--primary); }
+
+    .info-table { border-radius: 18px; border: 1px solid #dbe4f2; overflow: hidden; }
+    .info-table th, .info-table td { padding: 16px 18px; font-size: 15px; }
+    .info-table th { background: #eff4fb; width: 32%; }
+
+    footer {
+      background: #0b1a32;
+      color: rgba(255,255,255,0.8);
+      text-align: center;
+      padding: 30px 12px;
+      font-size: 13px;
+    }
+
+    .floating-cta {
+      position: fixed;
+      right: 24px;
+      bottom: 24px;
+      background: #fff;
+      border-radius: 18px;
+      box-shadow: 0 20px 38px rgba(10,28,56,0.2);
+      padding: 18px;
+      display: grid;
+      gap: 12px;
+      width: min(280px, 90vw);
+      z-index: 20;
+      transform: translateY(140%);
+      transition: transform 0.3s ease;
+    }
+    .floating-cta.show { transform: translateY(0); }
+    .floating-cta .btn { display: flex; align-items: center; justify-content: center; gap: 8px; padding: 12px 16px; border-radius: 12px; font-weight: 700; }
+    .floating-cta .btn.primary { background: var(--accent); color: var(--primary-dark); }
+    .floating-cta .btn.secondary { background: var(--primary); color: #fff; }
+
+    .page-top {
+      position: fixed;
+      right: 24px;
+      bottom: 24px;
+      transform: translateY(200%);
+      background: var(--primary);
+      color: #fff;
+      border-radius: 999px;
+      padding: 12px 18px;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      box-shadow: 0 16px 28px rgba(10,35,72,0.2);
+      transition: transform 0.3s ease;
+      z-index: 15;
+    }
+    .page-top.show { transform: translateY(-100px); }
+
+    @media (max-width: 960px) {
+      .intro-head { justify-content: center; text-align: center; }
+      .intro-info { justify-content: center; }
+      .intro { padding: 56px 0; }
+      .intro-points { justify-content: center; }
+      .timeline { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 720px) {
+      .intro-cta .btn { width: 100%; justify-content: center; }
+      .cta-panel__actions .btn { width: 100%; justify-content: center; max-width: 320px; }
+      .cta-panel__actions { flex-direction: column; align-items: center; }
+      .timeline { grid-template-columns: 1fr; }
+      .timeline-item { padding-left: 24px; }
+      .timeline-item span { position: static; display: block; margin-bottom: 6px; }
+      .floating-cta { right: 10px; bottom: 10px; padding: 14px; width: min(240px, 88vw); gap: 10px; }
+      .floating-cta .btn { padding: 10px 14px; font-size: 14px; }
+      .page-top { right: 10px; bottom: 10px; }
+      .intro { padding: 48px 0; }
+    }
+  </style>
+</head>
+<body>
+<a id="top"></a>
+<div class="wrapper">
+  <header class="hero" aria-hidden="true">
+    <picture>
+      <source media="(max-width: 720px)" srcset="img/hero/mobile_hero.webp">
+      <img src="img/hero/lunch-break-whitening.webp" alt="お昼休みから始めるオフィスホワイトニングのイメージ">
+    </picture>
+  </header>
+
+  <section class="intro">
+    <div class="container">
+      <div class="intro-head">
+        <div class="intro-title">
+          <h1>西川デンタルクリニック</h1>
+          <p class="intro-location">大阪・東梅田（泉の広場すぐ）／谷町線「東梅田」徒歩5分</p>
+        </div>
+        <div class="intro-info">
+          <span>TEL 06-6315-8148</span>
+          <span>診療 10:00-13:00／14:00-19:00（火・木は18:30まで）</span>
+        </div>
+      </div>
+      <p class="intro-lead">「お昼休みの60分でサッと整える」。働く女性を中心に支持されているオフィスホワイトニングを、Hot Pepper Beauty 限定の初回9,000円で体験いただけます。</p>
+      <ul class="intro-points">
+        <li>初回 9,000円（Hot Pepper Beauty）</li>
+        <li>歯科医・歯科衛生士が丁寧にサポート</li>
+        <li>商談・面接・挙式前の駆け込みにも対応</li>
+      </ul>
+      <div class="intro-cta">
+        <a class="btn primary" href="https://clinic.beauty.hotpepper.jp/H000754078/" target="_blank" rel="noreferrer">✨ Hot Pepper Beautyで空き枠を見る</a>
+        <a class="btn secondary" href="tel:0663158148">☎ 電話で相談する</a>
+      </div>
+      <p class="intro-meta">自由診療／税込価格｜口コミ評価 4.8 以上（Hot Pepper Beauty）｜男性の方もご予約可能です。</p>
+    </div>
+  </section>
+
+  <section class="concern-section">
+    <div class="concern-overlay"></div>
+    <div class="container">
+      <div class="concern-content">
+        <h2 class="concern-title">こんなお悩みありませんか？</h2>
+        <ul class="concern-list">
+          <li>黄色っぽい歯が気になる。</li>
+          <li>口をあけて笑うのに抵抗がある。</li>
+          <li>人と接するときに自信が持てない。</li>
+          <li>サロンのホワイトニングで白くならなかった。</li>
+          <li>加齢とともに歯が黄ばんできた気がする。</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2 class="section-title">お昼休みホワイトニングが選ばれる3つの理由</h2>
+      <div class="reason-grid">
+        <figure class="reason-card" style="padding:0; overflow:hidden;">
+          <img src="img/clinic/ChatGPT Image 2025年10月22日 14_27_12.webp" alt="選ばれる理由1：60分で完了するスケジュール">
+        </figure>
+        <figure class="reason-card" style="padding:0; overflow:hidden;">
+          <img src="img/clinic/ChatGPT Image 2025年10月22日 14_27_17.webp" alt="選ばれる理由2：歯科医師・歯科衛生士が並走">
+        </figure>
+        <figure class="reason-card" style="padding:0; overflow:hidden;">
+          <img src="img/clinic/ChatGPT Image 2025年10月22日 14_27_20.webp" alt="選ばれる理由3：目的で選べるプラン">
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2 class="section-title">働く女性のランチタイム活用例</h2>
+      <p class="section-lead">昼休みの1時間でここまでできる。カウンセリングから施術、メイク直しまでの流れをご紹介します。</p>
+      <figure style="margin:0 0 32px; text-align:center;">
+        <img src="img/clinic/ChatGPT Image 2025年10月22日 09_47_42.webp" alt="ランチタイムホワイトニングの流れ図">
+      </figure>
+      <div class="timeline">
+        <div class="timeline-item">
+          <span>12:00</span>
+          <strong>来院・受付</strong>
+          <p>仕事の合間でも来院しやすい駅チカ。問診票の記入とカウンセリング準備を行います。</p>
+        </div>
+        <div class="timeline-item">
+          <span>12:10</span>
+          <strong>カウンセリング＆色調確認</strong>
+          <p>歯科衛生士が現在の歯の色を測定し、ホワイトニング方法や注意点を丁寧にご説明します。</p>
+        </div>
+        <div class="timeline-item">
+          <span>12:20</span>
+          <strong>クリーニング＆ホワイトニング</strong>
+          <p>表面の着色を除去した後、専用薬剤と照射器でホワイトニング。痛みやしみる感覚がないか随時確認します。</p>
+        </div>
+        <div class="timeline-item">
+          <span>13:00</span>
+          <strong>仕上がりチェック・メイク直し</strong>
+          <p>歯科医師が状態をチェックし、アフターケアを案内。簡易的なメイク直しスペースをご利用いただけます。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2 class="section-title" style="position:absolute;left:-9999px;">目的別に選べる3つのホワイトニングプログラム</h2>
+      <figure style="margin:0 0 32px; text-align:center;">
+        <img src="img/clinic/ChatGPT Image 2025年10月22日 12_00_09.webp" alt="ホワイトニングプログラムの比較図">
+      </figure>
+      <div class="plan-grid">
+        <article class="plan-card" data-tag="Office Whitening">
+          <h3>オフィスホワイトニング</h3>
+          <p>短期間でトーンアップしたい方に。初回から白さを実感しやすい医療グレードの薬剤と照射器を使用します。</p>
+          <ul>
+            <li>初回限定：9,000円（1回 / 約60分）</li>
+            <li>3回コース：50,000円（約3〜4週間で仕上げ）</li>
+            <li>6回コース：90,000円（長期維持向け）</li>
+            <li>おすすめ：商談や面接、会食前の駆け込みケア</li>
+          </ul>
+        </article>
+        <article class="plan-card" data-tag="Dual Whitening">
+          <h3>デュアルホワイトニング</h3>
+          <p>挙式や登壇など期日が決まっている方向け。オフィス施術とホームケアを組み合わせ、色戻りを抑えながら理想の白さを目指します。</p>
+          <ul>
+            <li>初回セット：45,000円（オフィス1回＋ホーム上下）</li>
+            <li>集中プログラム：75,000円（オフィス3回＋ホーム上下）</li>
+            <li>仕上がりチェック＆追加照射オプションあり</li>
+            <li>おすすめ：結婚式・撮影・登壇が迫っている方</li>
+          </ul>
+        </article>
+        <article class="plan-card" data-tag="Home Whitening">
+          <h3>ホームホワイトニング</h3>
+          <p>出張や在宅ワークが多く通院が難しい方に。専用トレーとジェルで自宅でじっくりケアし、白さを長くキープします。</p>
+          <ul>
+            <li>初回セット：25,000円（トレー＋ジェル4本）</li>
+            <li>追加ジェル：1本3,000円〜（色戻り対策に）</li>
+            <li>ホームケアとオフィスケアの切り替えも柔軟に対応</li>
+            <li>おすすめ：仕事・育児と両立しながら白さを維持したい方</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2 class="section-title">ホワイトニングについて</h2>
+      <div class="media-pair" style="grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));">
+        <figure>
+          <img src="img/clinic/ChatGPT Image 2025年10月21日 11_15_26.webp" alt="ホワイトニングの流れを説明する図解イメージ">
+          <figcaption class="media-note">気になることは歯科医師または歯科衛生士に何でもご相談ください。お時間を気にせず丁寧にご説明いたします。</figcaption>
+        </figure>
+        <div>
+          <article class="plan-card" data-tag="Basic">
+            <h3>ホワイトニングとは？</h3>
+            <p>歯を削らずに薬剤で色素を分解し、本来の白さを取り戻す“歯の漂白”です。短期間で効果を実感できるオフィスホワイトニングと、ご自宅で続けるホームホワイトニングをご用意しています。</p>
+          </article>
+          <article class="plan-card" data-tag="Method">
+            <h3>施術スタイルの違い</h3>
+            <ul>
+              <li><strong>オフィス：</strong> 医療用の高濃度薬剤で数回の通院。歯科医師・歯科衛生士が直接サポート。</li>
+              <li><strong>ホーム：</strong> 専用トレーとジェルで1日2〜8時間のケアを2〜4週間継続。時間を選ばずに続けられます。</li>
+            </ul>
+          </article>
+          <article class="plan-card" data-tag="Safety">
+            <h3>安全性と注意事項</h3>
+            <p>過酸化尿素・過酸化水素は長年口腔消毒に使われてきた薬剤です。まれに知覚過敏などの違和感が出ることがありますが、多くは一時的で、施術を調整することで軽減できます。</p>
+            <p style="font-size:13px; color:var(--muted);">※妊娠・授乳中、薬剤アレルギー、重い知覚過敏がある方、原因によっては適用外となる場合があります。詳細はスタッフへご相談ください。</p>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2 class="section-title">口コミでわかる安心感</h2>
+      <p class="section-lead">Hot Pepper Beauty とGoogle口コミで、施術後の満足度は平均4.8以上。丁寧な説明と即効性をご評価いただいています。</p>
+      <div class="testimonial-grid">
+        <figure class="testimonial-card" style="padding:0; overflow:hidden;">
+          <img src="img/clinic/ChatGPT Image 2025年10月22日 14_27_12.webp" alt="お客様の声：挙式前の方からのコメント">
+        </figure>
+        <figure class="testimonial-card" style="padding:0; overflow:hidden;">
+          <img src="img/clinic/ChatGPT Image 2025年10月22日 14_27_17.webp" alt="お客様の声：当日予約された方のコメント">
+        </figure>
+        <figure class="testimonial-card" style="padding:0; overflow:hidden;">
+          <img src="img/clinic/ChatGPT Image 2025年10月22日 14_27_20.webp" alt="お客様の声：旅行中に来院された方のコメント">
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2 class="section-title">仕上がりイメージと施術風景</h2>
+      <div class="media-pair" style="grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));">
+        <figure>
+          <img src="img/clinic/20191204a04.webp" alt="歯科衛生士がホワイトニング施術を行っている様子">
+          <figcaption class="media-note">歯科衛生士が歯の状態を確認しながら施術。違和感があればすぐに調整します。</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2 class="section-title">当日の流れと持ち物</h2>
+      <div class="step-flow">
+        <div class="step-card">
+          <h3>カウンセリング</h3>
+          <p>問診票の確認と目標のヒアリング。歯の色や口腔内のコンディションを診断します。</p>
+        </div>
+        <div class="step-card">
+          <h3>クリーニング</h3>
+          <p>ホワイトニング前に表面の着色を除去。効果を高めるため歯面を整えます。</p>
+        </div>
+        <div class="step-card">
+          <h3>ホワイトニング施術</h3>
+          <p>専用薬剤を塗布し照射器でケア。痛みやしみがないか確認しながら進めます。</p>
+        </div>
+        <div class="step-card">
+          <h3>医師のチェック・アフターケア</h3>
+          <p>歯科医師が仕上がりを確認。ホームケアのポイントや次回の提案を行います。</p>
+        </div>
+      </div>
+      <p class="section-lead" style="margin-top:48px;">当日の持ち物：歯ブラシまたはタフトブラシ／メイク直し用品／身分証（保険証）／コンタクトケース（必要な方）。</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2 class="section-title">料金一覧（自由診療・税込）</h2>
+      <table class="price-table">
+        <thead>
+          <tr>
+            <th>メニュー</th>
+            <th>内容</th>
+            <th>料金</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>オフィスホワイトニング</td>
+            <td>初回限定（Hot Pepper Beauty）1回コース</td>
+            <td>9,000円</td>
+          </tr>
+          <tr>
+            <td>オフィスホワイトニング</td>
+            <td>通常1回コース</td>
+            <td>20,000円</td>
+          </tr>
+          <tr>
+            <td>オフィスホワイトニング</td>
+            <td>3回コース（約1か月）</td>
+            <td>50,000円</td>
+          </tr>
+          <tr>
+            <td>オフィスホワイトニング</td>
+            <td>6回コース（約2〜3か月）</td>
+            <td>90,000円</td>
+          </tr>
+          <tr>
+            <td>デュアルホワイトニング</td>
+            <td>オフィス1回＋ホーム上下</td>
+            <td>45,000円</td>
+          </tr>
+          <tr>
+            <td>デュアルホワイトニング</td>
+            <td>オフィス3回＋ホーム上下</td>
+            <td>75,000円</td>
+          </tr>
+          <tr>
+            <td>ホームホワイトニング</td>
+            <td>初回セット（トレー＋ジェル4本）</td>
+            <td>25,000円</td>
+          </tr>
+          <tr>
+            <td>ホームホワイトニング</td>
+            <td>追加ジェル（1本）</td>
+            <td>3,000円〜</td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="media-note">※料金・内容は2025年10月時点。変更となる場合があります。最新情報はHot Pepper Beautyをご確認ください。</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2 class="section-title">よくあるご質問</h2>
+      <details>
+        <summary>Q. メイクは落とす必要がありますか？</summary>
+        <p>施術中に唇や歯ぐきに薬剤が触れないようリップメイクのみ落としていただきます。ファンデーションは軽く整える程度で構いません。施術後にメイク直しスペースをご利用ください。</p>
+      </details>
+      <details>
+        <summary>Q. 授乳中・妊娠中でも受けられますか？</summary>
+        <p>ホワイトニング薬剤の安全性は高いものの、妊娠中・授乳中は念のため施術を控えていただいています。復帰後のスケジュール提案は可能ですのでご相談ください。</p>
+      </details>
+      <details>
+        <summary>Q. 痛みや知覚過敏が心配です。</summary>
+        <p>施術前に知覚過敏のリスクをヒアリングし、対策ジェルを使用します。しみや痛みがある場合は照射時間を調整しますのでご安心ください。</p>
+      </details>
+      <details>
+        <summary>Q. 男性も予約できますか？</summary>
+        <p>男性の方もご予約いただけます。ただし混雑状況により日程のご相談をお願いする場合があります。</p>
+      </details>
+      <details>
+        <summary>Q. ホームホワイトニングだけでも効果がありますか？</summary>
+        <p>自宅でじっくりケアしたい方向けに、ホームホワイトニング単体のプログラムも用意しています。色戻り対策として、数か月おきにオフィスホワイトニングを組み合わせる方も多いです。</p>
+      </details>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2 class="section-title">診療情報・アクセス</h2>
+      <table class="info-table">
+        <tbody>
+          <tr>
+            <th>所在地</th>
+            <td>〒530-0027 大阪市北区堂山町3-3 日本生命梅田ビル8F</td>
+          </tr>
+          <tr>
+            <th>電話番号</th>
+            <td><a href="tel:0663158148">06-6315-8148</a></td>
+          </tr>
+          <tr>
+            <th>診療時間</th>
+            <td>10:00〜13:00／14:00〜19:00（火・木は14:00〜18:30）</td>
+          </tr>
+          <tr>
+            <th>休診日</th>
+            <td>日曜・祝日</td>
+          </tr>
+          <tr>
+            <th>診療科目</th>
+            <td>一般歯科／小児歯科／予防歯科／審美歯科／ホワイトニング／義歯／往診</td>
+          </tr>
+          <tr>
+            <th>お問い合わせ</th>
+            <td>Hot Pepper Beautyのネット予約、または <a href="mailto:nishikawa63158148@yahoo.co.jp">nishikawa63158148@yahoo.co.jp</a></td>
+          </tr>
+        </tbody>
+      </table>
+      <div style="margin-top:32px; display:grid; gap:24px; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));">
+        <iframe title="西川デンタルクリニック 地図" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1640.0540504025219!2d135.5019302563895!3d34.70245328043417!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000e6eb31225687%3A0xc0bb4dc4a2756f9c!2z5pel5pys5biC5YyX5Yy65aCC5bGx55S677yT4oiS77yTIOaXpeacrOeUn-WRveaiheeUsOODk-ODqyA4Rg!5e0!3m2!1sja!2sjp!4v1529983016754" width="100%" height="360" style="border:0;border-radius:22px; box-shadow:0 18px 32px rgba(12,45,88,0.14);" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="cta-panel" style="text-align:center;">
+        <h2 style="margin-bottom:16px; font-size:26px;">まずは初回9,000円のトライアルから。</h2>
+        <p style="margin-bottom:22px; font-size:16px; color:var(--muted);">自由診療／税込｜当日予約可（空き状況による）｜男性の方もご相談ください。</p>
+        <div class="cta-panel__actions">
+          <a class="btn primary" href="https://clinic.beauty.hotpepper.jp/H000754078/" target="_blank" rel="noreferrer">Hot Pepper Beautyで予約する</a>
+          <a class="btn secondary" href="tel:0663158148">電話 06-6315-8148</a>
+        </div>
+        <p class="media-note" style="margin-top:18px;">※自由診療／効果には個人差があります。医療広告ガイドラインに基づき、症例写真はイメージです。</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>Copyright &copy; 2025 Nishikawa Dental Clinic. All Rights Reserved.</p>
+  </footer>
+</div>
+
+<div class="floating-cta" id="floatingCta">
+  <strong style="font-size:15px;">ホワイトニングのご予約・お問い合わせ</strong>
+  <a class="btn primary" href="https://clinic.beauty.hotpepper.jp/H000754078/" target="_blank" rel="noreferrer">🌟 Hot Pepper Beautyで予約</a>
+  <a class="btn secondary" href="tel:0663158148">☎ 06-6315-8148</a>
+</div>
+<a class="page-top" id="pageTop" href="#top">TOP</a>
+
+<script>
+  const floatingCta = document.getElementById('floatingCta');
+  const pageTop = document.getElementById('pageTop');
+  const toggleFloating = () => {
+    const scrollY = window.scrollY || document.documentElement.scrollTop;
+    if (scrollY > 480) {
+      floatingCta.classList.add('show');
+      pageTop.classList.add('show');
+    } else {
+      floatingCta.classList.remove('show');
+      pageTop.classList.remove('show');
+    }
+  };
+  window.addEventListener('scroll', toggleFloating);
+</script>
+</body>
+</html>
